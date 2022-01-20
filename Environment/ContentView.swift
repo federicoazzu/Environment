@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-class DataExample : ObservableObject {
+// MainActor tells to perform on the main thread
+@MainActor class DataExample : ObservableObject {
     @Published var text = "Counter"
     @Published var counter = 0
 }
