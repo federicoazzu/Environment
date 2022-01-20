@@ -10,7 +10,6 @@ import SwiftUI
 class DataExample : ObservableObject {
     @Published var text = "Counter"
     @Published var counter = 0
-    
 }
 
 struct ContentView: View {
