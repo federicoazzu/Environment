@@ -7,10 +7,21 @@
 
 import SwiftUI
 
+class DataExample : ObservableObject {
+    @Published var text = "Counter"
+    @Published var counter = 0
+    
+}
+
 struct ContentView: View {
+    @StateObject var data = DataExample()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TextBlockView()
+            OtherSampleView()
+        }
+        .environmentObject(data)
     }
 }
 
